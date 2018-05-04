@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from audio_library.views import get_songs
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'', get_songs)
 ]

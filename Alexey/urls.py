@@ -15,11 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from audio_library.views import get_songs
+from audio_library.views import get_songs, SongViewSet
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'', get_songs)
+    url(r'', get_songs),
     url(r'songs', SongViewSet.as_view({'get': 'list'}))
-
 ]

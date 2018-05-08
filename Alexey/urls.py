@@ -20,4 +20,6 @@ from audio_library.views import get_songs
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', get_songs)
+    url(r'songs', SongViewSet.as_view({'get': 'list'}))
+
 ]
